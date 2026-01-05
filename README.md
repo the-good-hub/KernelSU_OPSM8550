@@ -1,3 +1,5 @@
+基于OnePlus12R-Development内核源编译的适用于PixelOS的 Built-in KowSU内核
+
 sh getclang.sh以获取clang
 
 source source-clang.sh以应用clang环境
@@ -13,3 +15,7 @@ https://github.com/backslashxx/ksu_toolkit
 
 Inferno's build(ksu ksunext sukisu)
 https://github.com/inferno0230/kernel_oneplus_sm8550-CI
+
+sources:
+https://github.com/OnePlus12R-development/android_kernel_oneplus_sm8550.git
+https://github.com/OnePlus12R-development/android_kernel_oneplus_sm8550-modules.git

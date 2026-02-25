@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       clang_version:
-        description: Type the clang version of ur kernel
+        description: Clang Version
         required: true
         type: choice
         options:
@@ -22,16 +22,15 @@ on:
         options:
           - LineageOS
           - crdroidandroid
-          - OnePlus12R-development
           
       kernel_branch:
-        description: Kernel Branch(such as lineage-23.2 sixteen-qpr1)
+        description: Kernel Branch
         required: true
         type: string
         default: ""
         
       ksu_type:
-        description: "KernelSU Version"
+        description: KernelSU Variant
         required: true
         type: choice
         options:
@@ -39,7 +38,6 @@ on:
           - Official-KernelSU
           - KernelSU-Next
           - KernelSU-Next-with-susfs
-          - KowSU
           - ReSukiSU
           - ReSukiSU-with-susfs
           
@@ -119,10 +117,6 @@ jobs:
               
             "Official-KernelSU")
               curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
-              ;;
-              
-            "KowSU")
-               curl -LSs "https://raw.githubusercontent.com/KOWX712/KernelSU/main/kernel/setup.sh" | bash -s master
               ;;
 
             "KernelSU-Next")
